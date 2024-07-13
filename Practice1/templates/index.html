@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home</title>
-    </head>
-    <body>
-        <div><h1>This website is for practise</h1>
-        <p>Hello, {{ name }}...!</p>
-        </div>
-        <script type="text/javascript" 
-        src="{{ url_for('statics', filename='index.js')}}"></script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div>
+      {% block content %}
+      <h1>This website is for practise</h1>
+      <p>Hello, {{ name }}...!</p>
+      {% endblock %}
+    </div>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js')}}"
+    ></script>
+  </body>
 </html>

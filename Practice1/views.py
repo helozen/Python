@@ -2,13 +2,13 @@ from flask import Blueprint, render_template, request, jsonify, redirect, url_fo
 
 views = Blueprint(__name__, "views")
 
-@views.route("/")
+@views.route("/home")
 def home():
     return render_template("index.html", name="Shakti")
 
-@views.route("/profile/<username>")
-def profile(username):
-    return render_template("index.html", name=username)
+@views.route("/profile")
+def profile():
+    return render_template("profile.html")
 
 @views.route("/json")
 def get_json():
